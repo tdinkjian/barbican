@@ -1,9 +1,10 @@
-***********************
+*************************
 Consumers API - Reference
-***********************
+*************************
+
 
 GET <container_ref>/consumers
-###############
+#############################
 Lists a containers consumers.
 
 The list of consumers can be filtered by the parameters passed in via the URL.
@@ -63,7 +64,8 @@ HTTP Status Codes
 .. _post_consumers:
 
 POST <container-ref>/consumers
-################
+##############################
+
 Creates a consumer
 
 Attributes
@@ -144,7 +146,7 @@ HTTP Status Codes
 .. _delete_consumer:
 
 DELETE <container_ref>/consumers
-#########################
+################################
 
 Delete a consumer.
 

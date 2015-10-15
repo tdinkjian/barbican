@@ -100,12 +100,12 @@ The following will be the response
 
 .. code-block:: bash
 
-{"status": "ACTIVE", "updated": "2015-10-15T17:56:18.626724", "name": "container name", \
- "consumers": [], "created": "2015-10-15T17:55:44.380002", \
- "container_ref": "http://localhost:9311/v1/containers/74bbd3fd-9ba8-42ee-b87e-2eecf10e47b9", \
-  "creator_id": "b17c815d80f946ea8505c34347a2aeba", "secret_refs": \
-  [{"secret_ref": "http://localhost:9311/v1/secrets/b61613fc-be53-4696-ac01-c3a789e87973", \
-   "name": "private_key"}], "type": "generic"}
+    {"status": "ACTIVE", "updated": "2015-10-15T17:56:18.626724", "name": "container name", \
+    "consumers": [], "created": "2015-10-15T17:55:44.380002", \
+    "container_ref": "http://localhost:9311/v1/containers/74bbd3fd-9ba8-42ee-b87e-2eecf10e47b9", \
+    "creator_id": "b17c815d80f946ea8505c34347a2aeba", "secret_refs": \
+    [{"secret_ref": "http://localhost:9311/v1/secrets/b61613fc-be53-4696-ac01-c3a789e87973", \
+    "name": "private_key"}], "type": "generic"}
 
 When a delete is processed you will recieve a 200 OK. The response content
 of the delete call will be the container with the consumer list, without
