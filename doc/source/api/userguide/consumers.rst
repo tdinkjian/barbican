@@ -58,7 +58,7 @@ This should provide a response as follows:
 How to Retrieve a Consumer
 ##########################
 
-To retrieve a consumer simply perform a GET on the <container_ref>/consumers
+To retrieve a consumer simply perform a GET on the {container_ref}/consumers
 This will return all consumers for this container and you can optionally add a
 limit and offset query parameter.
 

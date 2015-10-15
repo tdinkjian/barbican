@@ -2,7 +2,7 @@
 Consumers API - Reference
 *************************
 
-GET <container_ref>/consumers
+GET {container_ref}/consumers
 #############################
 Lists a containers consumers.
 
@@ -62,7 +62,7 @@ HTTP Status Codes
 
 .. _post_consumers:
 
-POST <container_ref>/consumers
+POST {container_ref}/consumers
 ##############################
 
 Creates a consumer
@@ -84,7 +84,7 @@ Request:
 
 .. code-block:: javascript
 
-    POST <container_ref>/consumers
+    POST {container_ref}/consumers
     Headers:
         X-Project-Id: {project_id}
 
@@ -144,7 +144,7 @@ HTTP Status Codes
 
 .. _delete_consumer:
 
-DELETE <container_ref>/consumers
+DELETE {container_ref}/consumers
 ################################
 
 Delete a consumer.
@@ -166,7 +166,7 @@ Request:
 
 .. code-block:: javascript
 
-    POST <container_ref>/consumers
+    POST {container_ref}/consumers
     Headers:
         X-Project-Id: {project_id}
 
