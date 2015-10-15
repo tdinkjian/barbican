@@ -2,7 +2,6 @@
 Consumers API - Reference
 *************************
 
-
 GET <container_ref>/consumers
 #############################
 Lists a containers consumers.
@@ -63,7 +62,7 @@ HTTP Status Codes
 
 .. _post_consumers:
 
-POST <container-ref>/consumers
+POST <container_ref>/consumers
 ##############################
 
 Creates a consumer
