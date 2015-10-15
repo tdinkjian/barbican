@@ -99,7 +99,7 @@ Request:
 ********
 
 The request below shows a simple CMC request.  For examples of each type,
-see the :doc:`Certificate Quick Start Guide <../quickstart/certificates>`.
+see the :doc:`Certificate User's Guide <../userguide/certificates>`.
 
 .. code-block:: javascript
 
@@ -143,5 +143,10 @@ HTTP Status Codes
 +------+-----------------------------------------------------------------------------+
 | 401  | Invalid X-Auth-Token or the token doesn't have permissions to this resource |
 +------+-----------------------------------------------------------------------------+
+| 403  | Forbidden.  The user has been authenticated, but is not authorized to       |
+|      | create an order.  This can be based on the the user's role or the project's |
+|      | quota.                                                                      |
++------+-----------------------------------------------------------------------------+
 | 415  | Unsupported media type                                                      |
 +------+-----------------------------------------------------------------------------+
+

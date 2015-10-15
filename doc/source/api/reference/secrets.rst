@@ -17,23 +17,26 @@ make a separate call to get the secret details to view the secret.
 Parameters
 **********
 
-+--------+---------+----------------------------------------------------------------+
-| Name   | Type    | Description                                                    |
-+========+=========+================================================================+
-| offset | integer | The starting index within the total list of the secrets that   |
-|        |         | you would like to retrieve.                                    |
-+--------+---------+----------------------------------------------------------------+
-| limit  | integer | The maximum number of records to return (up to 100). The       |
-|        |         | default limit is 10.                                           |
-+--------+---------+----------------------------------------------------------------+
-| name   | string  | Selects all secrets with name equal to this value.             |
-+--------+---------+----------------------------------------------------------------+
-| bits   | integer | Selects all secrets with bit_length equal to this value.       |
-+--------+---------+----------------------------------------------------------------+
-| alg    | string  | Selects all secrets with algorithm equal to this value.        |
-+--------+---------+----------------------------------------------------------------+
-| mode   | string  | Selects all secrets with mode equal to this value.             |
-+--------+---------+----------------------------------------------------------------+
++----------+---------+----------------------------------------------------------------+
+| Name     | Type    | Description                                                    |
++==========+=========+================================================================+
+| offset   | integer | The starting index within the total list of the secrets that   |
+|          |         | you would like to retrieve.                                    |
++----------+---------+----------------------------------------------------------------+
+| limit    | integer | The maximum number of records to return (up to 100). The       |
+|          |         | default limit is 10.                                           |
++----------+---------+----------------------------------------------------------------+
+| name     | string  | Selects all secrets with name equal to this value.             |
++----------+---------+----------------------------------------------------------------+
+| bits     | integer | Selects all secrets with bit_length equal to this value.       |
++----------+---------+----------------------------------------------------------------+
+| alg      | string  | Selects all secrets with algorithm equal to this value.        |
++----------+---------+----------------------------------------------------------------+
+| mode     | string  | Selects all secrets with mode equal to this value.             |
++----------+---------+----------------------------------------------------------------+
+| acl_only | boolean | Selects all secrets with an ACL that contains the user.        |
+|          |         | Project scope is ignored.                                      |
++----------+---------+----------------------------------------------------------------+
 
 .. _secret_response_attributes:
 
@@ -169,6 +172,10 @@ HTTP Status Codes
 | 400  | Bad Request                                                                 |
 +------+-----------------------------------------------------------------------------+
 | 401  | Invalid X-Auth-Token or the token doesn't have permissions to this resource |
++------+-----------------------------------------------------------------------------+
+| 403  | Forbidden.  The user has been authenticated, but is not authorized to       |
+|      | create a secret. This can be based on the the user's role or the            |
+|      | project's quota.                                                            |
 +------+-----------------------------------------------------------------------------+
 | 415  | Unsupported media-type                                                      |
 +------+-----------------------------------------------------------------------------+
