@@ -82,7 +82,7 @@ Attributes
 Request:
 ********
 
-.. code-block:: javascript
+.. code-block:: json
 
     POST {container_ref}/consumers
     Headers:
@@ -97,7 +97,7 @@ Request:
 Response:
 *********
 
-.. code-block:: none
+.. code-block:: json
 
     200 OK
 
@@ -164,7 +164,7 @@ Attributes
 Request:
 ********
 
-.. code-block:: javascript
+.. code-block:: json
 
     POST {container_ref}/consumers
     Headers:
@@ -180,7 +180,7 @@ Request:
 Response:
 *********
 
-.. code-block:: none
+.. code-block:: json
 
     200 OK
 
