@@ -23,6 +23,74 @@ Parameters
 |          |         | default limit is 10.                                           |
 +----------+---------+----------------------------------------------------------------+
 
+
+Request:
+********
+
+.. code-block:: None
+
+    GET {container_ref}/consumers
+    Headers:
+        X-Project-Id: {project_id}
+
+Response:
+*********
+
+.. code-block:: None
+
+    200 OK
+
+    {
+        "total": 3,
+        "consumers": [
+            {
+                "status": "ACTIVE",
+                "URL": "consumerurl",
+                "updated": "2015-10-15T21:06:33.123878",
+                "name": "consumername",
+                "created": "2015-10-15T21:06:33.123872"
+            },
+            {
+                "status": "ACTIVE",
+                "URL": "consumerURL2",
+                "updated": "2015-10-15T21:17:08.092416",
+                "name": "consumername2",
+                "created": "2015-10-15T21:17:08.092408"
+            },
+            {
+                "status": "ACTIVE",
+                "URL": "consumerURL3",
+                "updated": "2015-10-15T21:21:29.970370",
+                "name": "consumername3",
+                "created": "2015-10-15T21:21:29.970365"
+            }
+        ]
+    }
+
+Request:
+********
+
+.. code-block:: None
+
+    GET {container_ref}/consumers?limit=1&offset=1
+    Headers:
+        X-Project-Id: {project_id}
+
+.. code-block:: None
+    {
+        "total": 3,
+        "next": "http://localhost:9311/v1/consumers?limit=1&offset=2",
+        "consumers": [
+            {
+                "status": "ACTIVE",
+                "URL": "consumerURL2",
+                "updated": "2015-10-15T21:17:08.092416",
+                "name": "consumername2",
+                "created": "2015-10-15T21:17:08.092408"
+            }
+        ],
+        "previous": "http://localhost:9311/v1/consumers?limit=1&offset=0"
+}
 .. _consumer_response_attributes:
 
 Response Attributes
@@ -82,7 +150,7 @@ Attributes
 Request:
 ********
 
-.. code-block:: json
+.. code-block:: None
 
     POST {container_ref}/consumers
     Headers:
@@ -97,7 +165,7 @@ Request:
 Response:
 *********
 
-.. code-block:: json
+.. code-block:: None
 
     200 OK
 
@@ -164,7 +232,7 @@ Attributes
 Request:
 ********
 
-.. code-block:: json
+.. code-block:: None
 
     POST {container_ref}/consumers
     Headers:
@@ -180,8 +248,7 @@ Request:
 Response:
 *********
 
-.. code-block:: json
-
+.. code-block:: None
     200 OK
 
     {

@@ -29,28 +29,29 @@ How to Create a Consumer
 This should provide a response as follows:
 
 .. code-block:: json
-{
-    "status": "ACTIVE",
-    "updated": "2015-10-15T21:06:33.121113",
-    "name": "container name",
-    "consumers": [
-        {
-            "URL": "consumerurl",
-            "name": "consumername"
-        }
-    ],
-    "created": "2015-10-15T17:55:44.380002",
-    "container_ref":
-    "http://localhost:9311/v1/containers/74bbd3fd-9ba8-42ee-b87e-2eecf10e47b9",
-    "creator_id": "b17c815d80f946ea8505c34347a2aeba",
-    "secret_refs": [
-        {
-            "secret_ref": "http://localhost:9311/v1/secrets/b61613fc-be53-4696-ac01-c3a789e87973",
-            "name": "private_key"
-        }
-    ],
-    "type": "generic"
-}
+
+    {
+        "status": "ACTIVE",
+        "updated": "2015-10-15T21:06:33.121113",
+        "name": "container name",
+        "consumers": [
+            {
+                "URL": "consumerurl",
+                "name": "consumername"
+            }
+        ],
+        "created": "2015-10-15T17:55:44.380002",
+        "container_ref":
+        "http://localhost:9311/v1/containers/74bbd3fd-9ba8-42ee-b87e-2eecf10e47b9",
+        "creator_id": "b17c815d80f946ea8505c34347a2aeba",
+        "secret_refs": [
+            {
+                "secret_ref": "http://localhost:9311/v1/secrets/b61613fc-be53-4696-ac01-c3a789e87973",
+                "name": "private_key"
+            }
+        ],
+        "type": "generic"
+    }
 
 
 .. _retrieve_consumer:
@@ -70,18 +71,19 @@ limit and offset query parameter.
 This should provide a response as follows:
 
 .. code-block:: json
-{
-    "total": 1,
-    "consumers": [
-        {
-            "status": "ACTIVE",
-            "URL": "consumerurl",
-            "updated": "2015-10-15T21:06:33.123878",
-            "name": "consumername",
-            "created": "2015-10-15T21:06:33.123872"
-        }
-    ]
-}
+
+    {
+        "total": 1,
+        "consumers": [
+            {
+                "status": "ACTIVE",
+                "URL": "consumerurl",
+                "updated": "2015-10-15T21:06:33.123878",
+                "name": "consumername",
+                "created": "2015-10-15T21:06:33.123872"
+            }
+        ]
+    }
 
 This is a list of all consumers for the container provided. All of the listed
 consumers will have the meta data listed.
@@ -97,20 +99,20 @@ and previous references to cycle through consumers.
 This should provide a response as follows:
 
 .. code-block:: json
-{
-    "total": 3,
-    "next": "http://localhost:9311/v1/consumers?limit=1&offset=2",
-    "consumers": [
-        {
-            "status": "ACTIVE",
-            "URL": "consumerURL2",
-            "updated": "2015-10-15T21:17:08.092416",
-            "name": "consumername2",
-            "created": "2015-10-15T21:17:08.092408"
-        }
-    ],
-    "previous": "http://localhost:9311/v1/consumers?limit=1&offset=0"
-}
+    {
+        "total": 3,
+        "next": "http://localhost:9311/v1/consumers?limit=1&offset=2",
+        "consumers": [
+            {
+                "status": "ACTIVE",
+                "URL": "consumerURL2",
+                "updated": "2015-10-15T21:17:08.092416",
+                "name": "consumername2",
+                "created": "2015-10-15T21:17:08.092408"
+            }
+        ],
+        "previous": "http://localhost:9311/v1/consumers?limit=1&offset=0"
+    }
 
 .. _delete_consumer:
 
@@ -129,22 +131,22 @@ in the initial creation.
 The following will be the response
 
 .. code-block:: json
-{
-    "status": "ACTIVE",
-    "updated": "2015-10-15T17:56:18.626724",
-    "name": "container name",
-    "consumers": [],
-    "created": "2015-10-15T17:55:44.380002",
-    "container_ref": "http://localhost:9311/v1/containers/74bbd3fd-9ba8-42ee-b87e-2eecf10e47b9",
-    "creator_id": "b17c815d80f946ea8505c34347a2aeba",
-    "secret_refs": [
-        {
-            "secret_ref": "http://localhost:9311/v1/secrets/b61613fc-be53-4696-ac01-c3a789e87973",
-            "name": "private_key"
-        }
-    ],
-    "type": "generic"
-}
+    {
+        "status": "ACTIVE",
+        "updated": "2015-10-15T17:56:18.626724",
+        "name": "container name",
+        "consumers": [],
+        "created": "2015-10-15T17:55:44.380002",
+        "container_ref": "http://localhost:9311/v1/containers/74bbd3fd-9ba8-42ee-b87e-2eecf10e47b9",
+        "creator_id": "b17c815d80f946ea8505c34347a2aeba",
+        "secret_refs": [
+            {
+                "secret_ref": "http://localhost:9311/v1/secrets/b61613fc-be53-4696-ac01-c3a789e87973",
+                "name": "private_key"
+            }
+        ],
+        "type": "generic"
+    }
 
 When a delete is processed you will recieve a 200 OK. The response content
 of the delete call will be the container with the consumer list, without
